@@ -1,7 +1,7 @@
-export default function Home() {
+export default function About() {
   return (
     <div>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+      <h1 className='text-3xl font-bold underline'>About</h1>
       <p className='text-lg'>안녕하세요! 프론트엔드 개발자 박명준입니다.</p>
     </div>
   );
