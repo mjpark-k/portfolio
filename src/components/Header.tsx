@@ -1,8 +1,20 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Projects', path: '/projects' },
+  { name: '미정', path: '/etc' },
+];
 
 export default function Header() {
+  const path = usePathname();
+
   return (
-    <header className='fixed top-0 left-0 w-full flex justify-between items-center px-10 py-5 font-semibold'>
+    <header className='fixed top-0 left-0 w-full flex justify-between items-center px-10 py-5 font-semibold bg-[color:var(--background)]'>
       <Link
         href='/'
         className='text-3xl font-bold inline-block hover:[animation:var(--animation-wiggle)] hover:text-[color:var(--accent)]'
@@ -13,38 +25,18 @@ export default function Header() {
       <div>
         <nav>
           <ul className='flex gap-20'>
-            <li>
-              <Link
-                href='/'
-                className='hover:text-[color:var(--accent)] transition'
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/about'
-                className='hover:text-[color:var(--accent)] transition'
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/projects'
-                className='hover:text-[color:var(--accent)] transition'
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/'
-                className='hover:text-[color:var(--accent)] transition'
-              >
-                미정
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link
+                  href={link.path}
+                  className={`hover:text-[color:var(--accent)] transition ${
+                    path === link.path ? 'text-[color:var(--accent)]' : ''
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
