@@ -44,6 +44,29 @@
   }
 }
 
+/* 전역 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 8px; /* 세로 스크롤 너비 */
+  height: 8px; /* 가로 스크롤 너비 */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* 트랙 배경 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4); /* 스크롤 핸들 색 */
+  border-radius: 10px;
+  border: 2px solid transparent; /* 패딩 느낌 */
+  background-clip: content-box;
+}
+
+/* Firefox용 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -54,6 +77,7 @@ body {
   box-sizing: border-box;
 }
 
-a {
+a,
+button {
   cursor: pointer;
 }
