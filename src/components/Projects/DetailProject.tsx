@@ -45,7 +45,6 @@ export default function DetailProject({ selectedProject }: DetailProjectProps) {
           <DetailVideo video={video} />
         </div>
         <div className='w-full flex flex-col gap-5 lg:flex-col lg:flex-1 lg:items-center lg:justify-center'>
-          {/* 여기 깃헙 배포 넣을까? */}
           <span className='text-2xl text-[color:var(--accent)] font-bold'>
             🔨 Tech Stacks
           </span>
