@@ -29,7 +29,7 @@ export default function ClientProjects() {
       </div>
       <AnimatePresence>
         {isOpen && selectedProject && (
-          <Modal closeModal={closeModal}>
+          <Modal isOpen={isOpen} closeModal={closeModal}>
             <DetailProject selectedProject={selectedProject} />
           </Modal>
         )}

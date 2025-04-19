@@ -1,15 +1,32 @@
 import { X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 interface ModalProps {
+  isOpen: boolean;
   closeModal: () => void;
   children: React.ReactNode;
 }
 
-export default function Modal({ children, closeModal }: ModalProps) {
+export default function Modal({ isOpen, closeModal, children }: ModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (isOpen && !modalRef.current?.contains(e.target as Node)) {
+        closeModal();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, closeModal]);
+
   return (
     <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>
       <motion.div
+        ref={modalRef}
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
