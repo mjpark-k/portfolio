@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import MyLink from './MyLink';
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
-  { name: '미정', path: '/etc' },
+  // { name: '미정', path: '/etc' },
 ];
 
 export default function Header() {
@@ -42,13 +43,20 @@ export default function Header() {
       <Link
         href='/'
         className='text-3xl font-bold inline-block hover:[animation:var(--animation-wiggle)] hover:text-[color:var(--accent)]'
-        // className='text-3xl font-bold inline-block transition-transform duration-300 hover:-translate-y-1 hover:text-[color:var(--accent)]'
       >
-        MyungJun
+        {/* 데스크탑에서는 MyungJun 표시 */}
+        <span className='hidden lg:inline'>MyungJun</span>
+        {/* 모바일에서는 MJ 표시 */}
+        <span className='inline lg:hidden'>MJ</span>
       </Link>
+      {path !== '/' && (
+        <div className='lg:hidden'>
+          <MyLink width={30} height={30} withMotion={false} />
+        </div>
+      )}
       {/* 데스크탑 메뉴 */}
       <div className='hidden lg:block'>
-        <ul className='flex gap-20'>
+        <ul className='flex gap-20 items-center'>
           {navLinks.map((link) => (
             <li key={link.path}>
               <Link
@@ -61,6 +69,11 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          <li>
+            {path !== '/' && (
+              <MyLink width={30} height={30} withMotion={false} />
+            )}
+          </li>
         </ul>
       </div>
       {/* 모바일 메뉴 아이콘 */}
