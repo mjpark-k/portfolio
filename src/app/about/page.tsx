@@ -11,7 +11,7 @@ export default function About() {
         <FadeInUp className='w-full' delay={0}>
           <AboutContainer title='About Me.'>
             안녕하세요! 저는 프론트엔드 개발자 박명준입니다. <br /> 협업과
-            성장을 중요하게 생각하며, 항상 사용자 경험을 중심으로 개발합니다.
+            성장을 중요하게 생각하며, 항상 사용자 경험을 고려하여 그것을 바탕으로 개발합니다.
           </AboutContainer>
         </FadeInUp>
         <FadeInUp className='w-full' delay={1}>

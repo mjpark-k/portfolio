@@ -11,7 +11,7 @@ export default function AboutListContents({
 }: AboutListContentsProps) {
   return (
     <div className='flex flex-col gap-2'>
-      <div className='text-2xl font-bold'>
+      <div className='text-xl font-bold md:text-2xl'>
         <div>{title}</div>
         <div className='text-xs font-normal text-[color:var(--muted)]'>
           {duration}
