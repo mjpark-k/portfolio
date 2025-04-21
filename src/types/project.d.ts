@@ -21,6 +21,9 @@ export interface Project {
   troubleShooting?: {
     problem: string;
     solution: string;
-    link?: string; // 문제 해결 과정 링크
+    link?: {
+      url: string; // 링크
+      isBlog: boolean; // 블로그 링크인지 여부
+    }; // 문제 해결 과정 링크
   }[];
 }
