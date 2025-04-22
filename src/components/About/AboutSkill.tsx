@@ -26,7 +26,7 @@ export default function AboutSkill() {
   return (
     <div className='flex flex-col gap-8 w-full'>
       <AboutSkillList title='💻 Languages' skillList={languageSkills} />
-      <AboutSkillList title='🧩 Frontend.' skillList={FrontendSkills} />
+      <AboutSkillList title='🧩 Frontend' skillList={FrontendSkills} />
       <AboutSkillList title='🔧 DevOps' skillList={etcSkills} />
     </div>
   );

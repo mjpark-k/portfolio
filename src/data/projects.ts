@@ -39,7 +39,7 @@ import { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     video: '/videos/portfolio.mp4',
-    title: 'portfolio',
+    title: 'Portfolio',
     summary: '나만의 포트폴리오를 위한 웹사이트 개발',
     description:
       'Notion이나 다른 형태로 포트폴리오를 만들고 관리하는 것 보다 프론트엔드 개발자라면 자신의 포트폴리오를 웹사이트 형태로 만들어 관리하는 것이 더 좋다고 생각했습니다. 그리고 포트폴리오에 주로 사용되는 framer-motion을 활용하여 애니메이션 효과를 주고, 다양한 라이브러리를 사용하여 포트폴리오를 제작하는 것이 도움도 될 수 있을 것 같아 포트폴리오 웹사이트를 제작하게 되었습니다.',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
   },
   {
     video: '/videos/moving.mp4',
-    title: 'moving',
+    title: 'Moving',
     summary: '이사 소비자와 이사 전문가 매칭 서비스',
     description:
       '소비자가 원하는 서비스와 주거 정보를 입력하면 이사 전문가들이 견적을 제공하고 사용자가 이를 바탕으로 이사 전문가를 선정할 수 있는 매칭 서비스를 제작합니다. 이를 통해 소비자는 견적과 이사 전문가의 이전 고객들로부터의 후기를 확인하며 신뢰할 수 있는 전문가를 선택할 수 있고, 소비자와 이사 전문가 간의 간편한 매칭이 가능합니다.',

@@ -28,7 +28,7 @@ export default function ProjectCard({ project, openModal }: ProjectCardProps) {
         />
       )}
       <div className='p-4 flex flex-col gap-2'>
-        <h1 className='text-2xl font-bold'>{title}</h1>
+        <h1 className='text-xl font-bold md:text-2xl'>{title}</h1>
         <p className='text-sm text-[color:var(--muted)]'>{summary}</p>
       </div>
     </div>
