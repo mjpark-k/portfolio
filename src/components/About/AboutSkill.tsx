@@ -12,6 +12,7 @@ const FrontendSkills = [
   { name: 'Next.js', src: '/icons/ic_nextjs.svg' },
   { name: 'Tailwind CSS', src: '/icons/ic_tailwindcss.svg' },
   { name: 'React-Query', src: '/icons/ic_reactquery.svg' },
+  { name: 'React Native', src: '/icons/ic_reactnative.svg' },
   { name: 'Framer-Motion', src: '/icons/ic_framermotion.svg' },
   { name: 'Zustand', src: '/icons/ic_zustand.svg' },
 ];
